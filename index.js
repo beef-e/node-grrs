@@ -13,7 +13,12 @@ try {
 	}
 
 	if (args[2] !== undefined) {
-		const file = readFileSync(args[2], 'utf8');
+		var file;
+		if (args[4] === undefined) {
+			file = readFileSync(args[2], 'utf8');
+		} else {
+			file = readFileSync(args[2], args[4]);
+		}
 		const pattern = args[3];
 
 		if (pattern === undefined) {
@@ -38,8 +43,6 @@ try {
 							console.log(`${lineNum}: ${linePart}${pattern} [+ ${lineArr[1].length}]`);
 						}
 					}
-
-					//console.log(`${lineNum}: `);
 				}
 			}
 		}
@@ -52,8 +55,13 @@ try {
 
 function info() {
 	console.log('grrs: A simple grep clone written (badly) in JS.');
-	console.log('Usage: grrs [options] [file] [pattern]');
+	console.log('Usage: grrs [options] [file] [pattern] [encoding]\n');
 
-	console.log('Options:\n');
+	console.log('Arguments:');
+	console.log('[file]\t\t\tSpecify the file to search in.');
+	console.log('[pattern]\t\tSpecify the pattern to search for.');
+	console.log('[encoding]\t\tSpecify the encoding of the file. Default is utf8.\n');
+
+	console.log('Options:');
 	console.log('-h, --help, -?\t\tShow this help message and exit.');
 }
