@@ -1,12 +1,14 @@
 {
-  "name": "grrs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "grrs",
+	"version": "1.0.0",
+	"description": "A simple grep clone written (badly) in JS",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"bin": "./index.js",
+	"keywords": [],
+	"author": "Giammaria Biffi",
+	"license": "ISC",
+	"type": "module"
 }
