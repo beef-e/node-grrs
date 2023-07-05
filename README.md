@@ -16,7 +16,7 @@ Usage: grrs [options] [file] [pattern] [encoding]
 - [pattern] Specify the pattern to search for.
 - [encoding] (Optional) Specify the encoding of the file. Default is utf8.
 
-#### Notes:
+### Notes:
 
 Feel free to submit a pull request if you think it could help improve the project!
 
