@@ -26,7 +26,21 @@ try {
 		for (const line of lines) {
 			lineNum++;
 			if (line.includes(pattern)) {
-				console.log(`${lineNum}: ${line}`);
+				if (line.length < 50) {
+					console.log(`${lineNum}: ${line}`);
+				} else {
+					const lineArr = line.split(pattern);
+					const lineArrLen = lineArr.length;
+					let lineArrIndex = 0;
+					for (const linePart of lineArr) {
+						lineArrIndex++;
+						if (lineArrIndex != lineArrLen) {
+							console.log(`${lineNum}: ${linePart}${pattern} [+ ${lineArr[1].length}]`);
+						}
+					}
+
+					//console.log(`${lineNum}: `);
+				}
 			}
 		}
 	}

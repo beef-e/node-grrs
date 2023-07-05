@@ -9,6 +9,5 @@
 	"bin": "./index.js",
 	"keywords": [],
 	"author": "Giammaria Biffi",
-	"license": "ISC",
-	"type": "module"
+	"license": "ISC"
 }
